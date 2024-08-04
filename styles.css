@@ -14,6 +14,7 @@ body {
     color: #fff;
     overflow: hidden;
     position: relative;
+    margin: 0;
 }
 
 body::before {
@@ -77,6 +78,34 @@ a:hover {
     margin: 20px auto;
 }
 
+.footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+    width: 100%; /* Full width to match body */
+    position: absolute; /* Positioned at the bottom */
+    bottom: 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer a {
+    color: #fe0000;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -99,5 +128,52 @@ a:hover {
     100% {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 30px;
+    }
+
+    .loader {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .loader {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
     }
 }
