@@ -95,7 +95,7 @@ a:hover {
     z-index: 1;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 25%;
     box-sizing: border-box;
 }
 
