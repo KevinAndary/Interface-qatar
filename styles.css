@@ -6,15 +6,17 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #000;
+    background: url('A_professional_construction-themed_background_imag.png') no-repeat center center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    color: #fff;
+    width: 100vw;
+    color: #ffffff;
     overflow: hidden;
-    position: relative;
     margin: 0;
+    position: relative;
 }
 
 body::before {
@@ -25,38 +27,44 @@ body::before {
     width: 100%;
     height: 100%;
     background: url('Interface_logo.jpeg') no-repeat center center;
-    background-size: 100%; /* Adjusted to make the logo even larger */
-    opacity: 0.2; /* Adjust the opacity as needed */
+    background-size: 100%; /* Adjusted size of the logo */
+    opacity: 0.15; /* Adjusted opacity */
     z-index: 0;
 }
 
 .container {
     text-align: center;
-    background: rgba(0, 0, 0, 0.6); /* Increased transparency */
-    padding: 40px;
+    background: rgba(0, 0, 0, 0.7); /* Darker transparency to enhance readability */
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    max-width: 500px;
+    max-width: 90%;
     width: 90%;
     z-index: 1;
     position: relative;
     animation: fadeIn 1s ease-in-out;
 }
 
-h1 {
-    font-size: 2.5rem;
+.logo {
+    width: 350px; /* Increased logo size */
     margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    font-size: 1.5rem; /* Adjusted text size */
+    margin-bottom: 10px;
     animation: slideIn 1s ease-in-out;
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Adjusted text size */
     margin-bottom: 15px;
     animation: slideIn 1.5s ease-in-out;
 }
 
 .contact-info {
-    margin-top: 20px;
+    margin-top: 10px;
     animation: slideIn 2s ease-in-out;
 }
 
@@ -70,12 +78,12 @@ a:hover {
 }
 
 .loader {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: #fe0000;
     border-radius: 50%;
     animation: pulse 2s infinite;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 .footer {
@@ -85,16 +93,15 @@ a:hover {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 1;
-    position: relative;
-    animation: fadeIn 1s ease-in-out;
-    width: 100%; /* Full width to match body */
-    position: absolute; /* Positioned at the bottom */
+    position: absolute;
     bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.9rem; /* Adjusted for mobile screens */
 }
 
 .footer a {
@@ -133,47 +140,49 @@ a:hover {
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        max-width: 90%; /* Adjusted for larger mobile screens */
+    }
+
+    .logo {
+        width: 250px; /* Adjusted for larger mobile screens */
+    }
+
     h1 {
-        font-size: 2rem;
+        font-size: 1.3rem; /* Adjusted for larger mobile screens */
     }
 
     p {
-        font-size: 1rem;
-    }
-
-    .container {
-        padding: 30px;
-    }
-
-    .loader {
-        width: 40px;
-        height: 40px;
-    }
-
-    .footer p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
-    .container {
-        padding: 20px;
+        font-size: 0.9rem; /* Adjusted for larger mobile screens */
     }
 
     .loader {
         width: 30px;
         height: 30px;
     }
+}
 
-    .footer p {
-        font-size: 0.8rem;
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        max-width: 90%; /* Adjusted for smaller mobile screens */
+    }
+
+    .logo {
+        width: 180px; /* Adjusted for smaller mobile screens */
+    }
+
+    h1 {
+        font-size: 1.1rem; /* Adjusted for smaller mobile screens */
+    }
+
+    p {
+        font-size: 0.8rem; /* Adjusted for smaller mobile screens */
+    }
+
+    .loader {
+        width: 25px;
+        height: 25px;
     }
 }
