@@ -1,10 +1,11 @@
-// scripts.js
-document.addEventListener('DOMContentLoaded', () => {
-    const elements = document.querySelectorAll('.construction-message > *');
-    elements.forEach((element, index) => {
-        setTimeout(() => {
-            element.style.opacity = 1;
-            element.style.transform = 'translateY(0)';
-        }, index * 300);
+// Example: You can add some simple animations or interactions
+document.addEventListener('DOMContentLoaded', function() {
+    const emailLink = document.querySelector('.email');
+    emailLink.addEventListener('mouseover', function() {
+        emailLink.style.backgroundColor = '#0056b3';
+    });
+
+    emailLink.addEventListener('mouseout', function() {
+        emailLink.style.backgroundColor = '#007BFF';
     });
 });
